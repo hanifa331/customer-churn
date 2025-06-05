@@ -1,0 +1,100 @@
+# Predicting Customer Churn at SyriaTel
+
+**Student**: Hanifa Chepchirchir  
+**Course**: DSFT-12  
+**Facilitator**: Nikita Njoroge  
+
+---
+
+## Project Overview
+
+This project aims to help **SyriaTel** reduce customer churn by building a machine learning model based on customer behavior data. By identifying customers likely to leave, SyriaTel can take proactive steps to retain them — improving customer satisfaction and reducing revenue loss.
+
+
+
+## Business Objectives
+
+1. Predict customer churn using behavioral and usage patterns.
+2. Identify the key features influencing churn.
+3. Provide actionable insights to the Customer Retention and Marketing teams.
+
+
+
+## Tools & Technologies Used
+
+- **Languages**: Python 3
+- **Libraries**:
+  - Data analysis: `pandas`, `numpy`
+  - Visualization: `matplotlib`, `seaborn`
+  - Machine Learning: `scikit-learn`, `xgboost`
+  - Imbalance handling: `imbalanced-learn`
+- **Environment**: Jupyter Notebook / VS Code
+
+
+## Steps Taken
+
+1. **Business Understanding**  
+   Defined churn problem in the context of SyriaTel.
+
+2. **Data Loading & Exploration**  
+   Inspected distributions, missing values, and feature types.
+
+3. **Data Preparation**
+   - Label encoding and scaling
+   - Class imbalance handling with `SMOTE`
+   - Feature selection using correlation and importance ranking
+
+4. **Modeling**
+   - Trained Logistic Regression, Decision Tree, Random Forest, and XGBoost
+   - Optimized XGBoost threshold for better recall
+
+5. **Evaluation**
+   - Metrics: Accuracy, Precision, Recall, F1, ROC AUC
+   - ROC Curve plotted for all models
+
+6. **Model Selection**
+   - XGBoost (optimized threshold = 0.35) selected as best performer
+
+7. **Insights & Recommendations**
+   - Delivered stakeholder-facing insights from feature importance
+
+
+
+## Data Preparation Summary
+
+- No missing values detected
+- Target: `Churn` (binary classification)
+- Categorical features encoded
+- Numerical features scaled
+- Class imbalance handled using **SMOTE**
+- Features selected based on domain relevance and importance plots
+
+
+
+## Stakeholders
+
+- **Customer Retention Team** – Uses churn predictions to engage at-risk customers with offers and services.
+- **Marketing Team** – Builds customer segments and targets them with personalized campaigns.
+- **Data Science Team** – Maintains and improves the model over time.
+- **Management** – Uses overall churn trends to guide strategic decisions.
+
+
+
+## Best Performing Model
+
+**Optimized XGBoost Classifier**  
+- Accuracy: **92%**  
+- Recall (Churn): **87%**  
+- F1 Score (Churn): **0.76**  
+- ROC AUC: **~0.84**
+
+This model provides the best trade-off between capturing churners and minimizing false positives.
+
+
+
+##  Key Insights
+
+- Customers with **international plans**, **high service call frequency**, and **low voicemail usage** are more likely to churn.
+- **Customer service experience** is a major churn driver.
+- **Targeted interventions** should focus on these risk signals.
+
