@@ -1,55 +1,48 @@
-## Author
-**Hanifa Chepchirchir**  
-Facilitator: Nikita Njoroge  
+Author
+Hanifa Chepchirchir
+Facilitator: Nikita Njoroge
 Moringa School - DSFT-12
+Customer Churn Prediction - SyriaTel
+Overview
+This project analyzes customer churn for SyriaTel using machine learning classification models. By examining customer behavior patterns, the goal is to predict which customers are likely to leave and provide actionable insights for retention strategies.
+Project Objectives
 
+SyriaTel is facing customer churn, which directly impacts revenue. The Customer Retention and Marketing Team wants to understand and predict which customers are most likely to churn.
 
-# Customer Churn Prediction - SyriaTel
+Goal:
+Build a classification model that predicts whether a customer will churn using features like service usage, international plan status, voicemail activity, and customer support interactions.
 
-## Overview
+      Key Questions to Answer:
 
-This project aims to predict customer churn for SyriaTel using supervised machine learning models. By analyzing customer behavior patterns, we identify churn-prone customers and provide actionable business insights.
+              > Can we predict churn based on customer behavior?
 
+              > What are the most influential features in predicting churn?
 
-## Problem Statement
-
-SyriaTel faces significant revenue losses due to customer churn. The goal is to build a classification model that predicts the likelihood of a customer leaving, using features like service usage, support interactions, and plan types.
-
-## Dataset
-
-- Source: SyriaTel Customer Usage Records
-- Features: Voicemail plan, International plan, Total minutes, Service calls, etc.
-- Target: Churn (Yes/No)
-
-## Tools Used
-
-- Python (Pandas, NumPy, Scikit-learn, XGBoost)
-- SMOTE for handling class imbalance
-- Matplotlib & Seaborn for visualization
-- Jupyter Notebook
-
-## Models Compared
-
-| Model                | Accuracy | Precision | Recall | F1-Score | ROC AUC |
-|---------------------|----------|-----------|--------|----------|---------|
-| Logistic Regression | 78%      | 0.38      | 0.78   | 0.51     | 0.84    |
-| Decision Tree       | 84%      | 0.65      | 0.63   | 0.64     | 0.79    |
-| Random Forest       | 89%      | 0.79      | 0.70   | 0.74     | 0.83    |
-| XGBoost             | **94%**  | **0.85**  | **0.70** | **0.77** | **0.84** |
-
-## Final Model
-
-**XGBoost Classifier**  
-Best performance across F1-Score and ROC AUC. Tuned with class weighting and threshold optimization.
-
-## Key Insights
-
-- Customers without a voicemail or international plan are more likely to churn.
-- High service call frequency correlates with dissatisfaction and churn risk.
-- Longer call durations and higher charges may also be churn indicators.
-
-## Recommendations
-
+              > How can SyriaTel use these insights to reduce churn?
+Dataset
+The dataset consists of customer usage records, with key features including:
+- Voicemail plan
+- International plan
+- Customer service calls
+- Total call minutes (day, evening, night, international)
+- Number of voice mail messages
+- Total charge
+- Churn status (Yes/No)
+Models Used
+> Logistic Regression
+> Decision Tree (Untuned & Tuned)
+> Random Forest Classifier
+> XGBoost Classifier
+ROC Curve Comparison
+The ROC curve visually compares model performance in distinguishing churners from non-churners. A higher area under the curve (AUC) indicates superior classification capability.
+Feature Importance (XGBoost & Logistic Regression)
+Key insights based on model feature importance analysis:
+Top Influential Factors:
+> Lack of a voicemail plan is strongly associated with churn.
+> Frequent customer service calls indicate dissatisfaction and lead to higher attrition rates.
+> International plan subscribers exhibit greater churn tendencies.
+> High total day-time call minutes correlate with increased churn probability.
+Recommendations
 Targeted Retention Campaigns
 Focus marketing and retention efforts on customers flagged by the model, especially those who frequently call customer service and lack a voicemail plan.
 
@@ -57,4 +50,12 @@ Service Quality Monitoring
 Monitor high call volumes to customer support as early churn indicators. Enhancing support responsiveness could help retain such customers.
 
 Product Bundling
-Encourage customers to subscribe to voicemail or international plans, as they are associated with lower churn rates
+Encourage customers to subscribe to voicemail or international plans, as they are associated with lower churn rates..
+Next Steps
+   Feature Engineering Enhancements – Introduce behavioral tracking, call patterns, and tenure-based insights.
+   Fine-Tune Hyperparameters – Apply Bayesian optimization for performance gains.
+   Threshold Optimization – Adjust decision thresholds to balance precision and recall effectively.
+   Deploy Model for Business Use – Develop an API for real-time predictions and monitoring.
+Conclusion
+By identifying churn-driving factors, optimizing classification models, and implementing customer retention strategies, this project provides valuable insights for SyriaTel. Next steps focus on refining prediction accuracy, enhancing business interventions, and improving customer engagement.
+
