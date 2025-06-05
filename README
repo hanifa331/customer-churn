@@ -4,7 +4,12 @@ Facilitator: Nikita Njoroge
 Moringa School - DSFT-12
 Customer Churn Prediction - SyriaTel
 Overview
-This project analyzes customer churn for SyriaTel using machine learning classification models. By examining customer behavior patterns, the goal is to predict which customers are likely to leave and provide actionable insights for retention strategies.
+ SyriaTel, a leading telecom provider, is experiencing a high customer churn rate—losing nearly 1 in 7 customers annually. This not only impacts revenue but also increases the cost of acquiring new users. To address this business challenge, we analyzed customer behavior data to predict churn and identify the key drivers behind it.
+
+Problem Statement
+SyriaTel is losing nearly 15% of its customers annually, impacting revenue and customer lifetime value. The company currently lacks a proactive system to identify customers at risk of churning.
+
+This project uses customer usage and service data to build a predictive model, helping the marketing and retention teams intervene early with personalized actions to reduce churn and improve loyalty.
 Project Objectives
 
 SyriaTel is facing customer churn, which directly impacts revenue. The Customer Retention and Marketing Team wants to understand and predict which customers are most likely to churn.
