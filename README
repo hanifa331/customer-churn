@@ -1,100 +1,60 @@
-# Predicting Customer Churn at SyriaTel
-
-**Student**: Hanifa Chepchirchir  
-**Course**: DSFT-12  
-**Facilitator**: Nikita Njoroge  
-
----
-
-## Project Overview
-
-This project aims to help **SyriaTel** reduce customer churn by building a machine learning model based on customer behavior data. By identifying customers likely to leave, SyriaTel can take proactive steps to retain them — improving customer satisfaction and reducing revenue loss.
+## Author
+**Hanifa Chepchirchir**  
+Facilitator: Nikita Njoroge  
+Moringa School - DSFT-12
 
 
+# Customer Churn Prediction - SyriaTel
 
-## Business Objectives
+## Overview
 
-1. Predict customer churn using behavioral and usage patterns.
-2. Identify the key features influencing churn.
-3. Provide actionable insights to the Customer Retention and Marketing teams.
-
+This project aims to predict customer churn for SyriaTel using supervised machine learning models. By analyzing customer behavior patterns, we identify churn-prone customers and provide actionable business insights.
 
 
-## Tools & Technologies Used
+## Problem Statement
 
-- **Languages**: Python 3
-- **Libraries**:
-  - Data analysis: `pandas`, `numpy`
-  - Visualization: `matplotlib`, `seaborn`
-  - Machine Learning: `scikit-learn`, `xgboost`
-  - Imbalance handling: `imbalanced-learn`
-- **Environment**: Jupyter Notebook / VS Code
+SyriaTel faces significant revenue losses due to customer churn. The goal is to build a classification model that predicts the likelihood of a customer leaving, using features like service usage, support interactions, and plan types.
 
+## Dataset
 
-## Steps Taken
+- Source: SyriaTel Customer Usage Records
+- Features: Voicemail plan, International plan, Total minutes, Service calls, etc.
+- Target: Churn (Yes/No)
 
-1. **Business Understanding**  
-   Defined churn problem in the context of SyriaTel.
+## Tools Used
 
-2. **Data Loading & Exploration**  
-   Inspected distributions, missing values, and feature types.
+- Python (Pandas, NumPy, Scikit-learn, XGBoost)
+- SMOTE for handling class imbalance
+- Matplotlib & Seaborn for visualization
+- Jupyter Notebook
 
-3. **Data Preparation**
-   - Label encoding and scaling
-   - Class imbalance handling with `SMOTE`
-   - Feature selection using correlation and importance ranking
+## Models Compared
 
-4. **Modeling**
-   - Trained Logistic Regression, Decision Tree, Random Forest, and XGBoost
-   - Optimized XGBoost threshold for better recall
+| Model                | Accuracy | Precision | Recall | F1-Score | ROC AUC |
+|---------------------|----------|-----------|--------|----------|---------|
+| Logistic Regression | 78%      | 0.38      | 0.78   | 0.51     | 0.84    |
+| Decision Tree       | 84%      | 0.65      | 0.63   | 0.64     | 0.79    |
+| Random Forest       | 89%      | 0.79      | 0.70   | 0.74     | 0.83    |
+| XGBoost             | **94%**  | **0.85**  | **0.70** | **0.77** | **0.84** |
 
-5. **Evaluation**
-   - Metrics: Accuracy, Precision, Recall, F1, ROC AUC
-   - ROC Curve plotted for all models
+## Final Model
 
-6. **Model Selection**
-   - XGBoost (optimized threshold = 0.35) selected as best performer
+**XGBoost Classifier**  
+Best performance across F1-Score and ROC AUC. Tuned with class weighting and threshold optimization.
 
-7. **Insights & Recommendations**
-   - Delivered stakeholder-facing insights from feature importance
+## Key Insights
 
+- Customers without a voicemail or international plan are more likely to churn.
+- High service call frequency correlates with dissatisfaction and churn risk.
+- Longer call durations and higher charges may also be churn indicators.
 
+## Recommendations
 
-## Data Preparation Summary
+Targeted Retention Campaigns
+Focus marketing and retention efforts on customers flagged by the model, especially those who frequently call customer service and lack a voicemail plan.
 
-- No missing values detected
-- Target: `Churn` (binary classification)
-- Categorical features encoded
-- Numerical features scaled
-- Class imbalance handled using **SMOTE**
-- Features selected based on domain relevance and importance plots
+Service Quality Monitoring
+Monitor high call volumes to customer support as early churn indicators. Enhancing support responsiveness could help retain such customers.
 
-
-
-## Stakeholders
-
-- **Customer Retention Team** – Uses churn predictions to engage at-risk customers with offers and services.
-- **Marketing Team** – Builds customer segments and targets them with personalized campaigns.
-- **Data Science Team** – Maintains and improves the model over time.
-- **Management** – Uses overall churn trends to guide strategic decisions.
-
-
-
-## Best Performing Model
-
-**Optimized XGBoost Classifier**  
-- Accuracy: **92%**  
-- Recall (Churn): **87%**  
-- F1 Score (Churn): **0.76**  
-- ROC AUC: **~0.84**
-
-This model provides the best trade-off between capturing churners and minimizing false positives.
-
-
-
-##  Key Insights
-
-- Customers with **international plans**, **high service call frequency**, and **low voicemail usage** are more likely to churn.
-- **Customer service experience** is a major churn driver.
-- **Targeted interventions** should focus on these risk signals.
-
+Product Bundling
+Encourage customers to subscribe to voicemail or international plans, as they are associated with lower churn rates
