@@ -6,7 +6,7 @@ Customer Churn Prediction - SyriaTel
 Overview
  SyriaTel, a leading telecom provider, is experiencing a high customer churn rate—losing nearly 1 in 7 customers annually. This not only impacts revenue but also increases the cost of acquiring new users. To address this business challenge, we analyzed customer behavior data to predict churn and identify the key drivers behind it.
 
-Problem Statement
+Problem Statement.
 SyriaTel is losing nearly 15% of its customers annually, impacting revenue and customer lifetime value. The company currently lacks a proactive system to identify customers at risk of churning.
 
 This project uses customer usage and service data to build a predictive model, helping the marketing and retention teams intervene early with personalized actions to reduce churn and improve loyalty.
