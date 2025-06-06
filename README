@@ -1,12 +1,12 @@
-Author
+# Author
 Hanifa Chepchirchir
 Facilitator: Nikita Njoroge
 Moringa School - DSFT-12
-Customer Churn Prediction - SyriaTel
-Overview
+## Customer Churn Prediction - SyriaTel
+### Overview
  SyriaTel, a leading telecom provider, is experiencing a high customer churn rate—losing nearly 1 in 7 customers annually. This not only impacts revenue but also increases the cost of acquiring new users. To address this business challenge, we analyzed customer behavior data to predict churn and identify the key drivers behind it.
 
-Problem Statement.
+### Problem Statement.
 SyriaTel is losing nearly 15% of its customers annually, impacting revenue and customer lifetime value. The company currently lacks a proactive system to identify customers at risk of churning.
 
 This project uses customer usage and service data to build a predictive model, helping the marketing and retention teams intervene early with personalized actions to reduce churn and improve loyalty.
@@ -14,7 +14,7 @@ Project Objectives
 
 SyriaTel is facing customer churn, which directly impacts revenue. The Customer Retention and Marketing Team wants to understand and predict which customers are most likely to churn.
 
-Goal:
+##### Goal:
 Build a classification model that predicts whether a customer will churn using features like service usage, international plan status, voicemail activity, and customer support interactions.
 
       Key Questions to Answer:
@@ -47,7 +47,7 @@ Top Influential Factors:
 > Frequent customer service calls indicate dissatisfaction and lead to higher attrition rates.
 > International plan subscribers exhibit greater churn tendencies.
 > High total day-time call minutes correlate with increased churn probability.
-Recommendations
+## Recommendations
 Targeted Retention Campaigns
 Focus marketing and retention efforts on customers flagged by the model, especially those who frequently call customer service and lack a voicemail plan.
 
@@ -61,6 +61,6 @@ Next Steps
    Fine-Tune Hyperparameters – Apply Bayesian optimization for performance gains.
    Threshold Optimization – Adjust decision thresholds to balance precision and recall effectively.
    Deploy Model for Business Use – Develop an API for real-time predictions and monitoring.
-Conclusion
+## Conclusion
 By identifying churn-driving factors, optimizing classification models, and implementing customer retention strategies, this project provides valuable insights for SyriaTel. Next steps focus on refining prediction accuracy, enhancing business interventions, and improving customer engagement.
 
